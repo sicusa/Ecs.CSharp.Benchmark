@@ -37,6 +37,11 @@ namespace Ecs.CSharp.Benchmark
             {
                 for (int i = 0; i < entityCount; ++i)
                 {
+                    for (int j = 0; j < entityPadding; ++j)
+                    {
+                        World.CreateInArrayHost(Bundle.Create(0));
+                    }
+
                     World.CreateInArrayHost(Bundle.Create(new Component1()));
                 }
 
